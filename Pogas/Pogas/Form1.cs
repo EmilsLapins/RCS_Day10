@@ -14,7 +14,7 @@ namespace Pogas
     {
        private int skaitlis1 = 0;
        private int skaitlis2 = 0;
-        private string izvele = "";
+       private string izvele = ""; // seit saglabasies + vai -
 
 
 
@@ -113,11 +113,9 @@ namespace Pogas
             string vertiba = label1.Text; 
             skaitlis1 = Convert.ToInt16(vertiba);
 
-            izvele = button12.Text;
+            izvele = button12.Text; 
         }
-
-       
-
+        
         private void button13_Click(object sender, EventArgs e) // =
         {
             string vertiba = label1.Text;
@@ -129,16 +127,10 @@ namespace Pogas
             }
             else
             {
-                
-               
                 label1.Text = Kalkulacija.Atnem(skaitlis1, skaitlis2);
-                
             }
         }
-
-
-
-
+        
         private void label1_Click(object sender, EventArgs e)
         {
 
