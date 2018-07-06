@@ -131,6 +131,12 @@ namespace Pogas
             skaitlis1 = Convert.ToInt16(vertiba);
             izvele = button15.Text;
         }
+        private void button16_Click(object sender, EventArgs e) // x^
+        {
+            string vertiba = label1.Text;
+            skaitlis1 = Convert.ToInt16(vertiba);
+            izvele = button16.Text;
+        }
         private void button13_Click(object sender, EventArgs e) // =
         {
             string vertiba = label1.Text;
@@ -159,12 +165,20 @@ namespace Pogas
                             label1.Text = Kalkulacija.Dala(skaitlis1, skaitlis2);
 
                         }
+                        else
+                        {
+                            if (izvele == "^")
+                            {
+                                label1.Text = Kalkulacija.Kapina(skaitlis1, skaitlis2);
+                            }
+                        }
                     }
                 }
 
 
             }
         }
+
     }
 }
 // Sataisit pogas no 0 - 9 , nospiezot pogu paradas sis cipars!

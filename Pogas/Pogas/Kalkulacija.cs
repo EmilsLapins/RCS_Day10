@@ -22,7 +22,7 @@ namespace Pogas
             string result = Convert.ToString(a - b);
             return result;
         }
-        public static string Reizina(double a, double b)
+        public static string Reizina(int a, int b)
         {
             string result = Convert.ToString(a * b);
             return result;
@@ -32,6 +32,19 @@ namespace Pogas
         {
             string result = Convert.ToString(a / b);
             return result;
+        }
+
+        public static string Kapina(int a, int b)
+        {
+            int result = 1;
+            for (int i = 0; i < b; i++)
+            {
+                result *= a;
+
+            }
+            return Convert.ToString(result);
+
+           
         }
 
 
