@@ -12,17 +12,23 @@ namespace Pogas
 {
     public partial class Form1 : Form
     {
+       private int skaitlis1 = 0;
+       private int skaitlis2 = 0;
+
+
+
+
         public Form1()
         {
             InitializeComponent();
         }
-
+        
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void ChangeLabel (string cipars)
+        private void ChangeLabel (string cipars) // 
         {
             label1.Text = cipars;
         }
@@ -89,6 +95,38 @@ namespace Pogas
         {
             string Ievade = button10.Text;
             ChangeLabel(Ievade);
+        }
+
+        private void button11_Click(object sender, EventArgs e) //+
+        {
+            string vertiba = label1.Text;
+            skaitlis1 = Convert.ToInt16(vertiba);
+            
+
+        }
+
+        private void button12_Click(object sender, EventArgs e) //-
+        {
+
+            // private string kura saglabajam izveli + -> string a = "+"  if(name == "+")
+            string vertiba = label1.Text; 
+            skaitlis1 = Convert.ToInt16(vertiba);
+        }
+
+        private void button13_Click(object sender, EventArgs e) // =
+        {
+            string vertiba = label1.Text;
+            skaitlis2 = Convert.ToInt16(vertiba);
+            label1.Text =  Kalkulacija.Saskaita(skaitlis1, skaitlis2);
+            
+        }
+
+
+
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
