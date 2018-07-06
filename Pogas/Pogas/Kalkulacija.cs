@@ -17,10 +17,10 @@ namespace Pogas
             return result;
         }
 
-        public static int Atnem(int a, int b)
+        public static string Atnem(int a, int b)
         {
-            int rezultats = a - b;
-            return rezultats;
+            string result = Convert.ToString(a - b);
+            return result;
         }
 
     }
