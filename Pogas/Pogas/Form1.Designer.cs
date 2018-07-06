@@ -254,7 +254,7 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Kalkulators";
             this.ResumeLayout(false);
             this.PerformLayout();
 
