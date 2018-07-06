@@ -16,9 +16,7 @@ namespace Pogas
        private int skaitlis2 = 0;
        private string izvele = ""; // seit saglabasies + vai -
 
-
-
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -97,6 +95,10 @@ namespace Pogas
             string Ievade = button10.Text;
             ChangeLabel(Ievade);
         }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void button11_Click(object sender, EventArgs e) //+
         {
@@ -116,6 +118,19 @@ namespace Pogas
             izvele = button12.Text; 
         }
         
+        private void button14_Click(object sender, EventArgs e) // *
+        {
+            string vertiba = label1.Text;
+            skaitlis1 = Convert.ToInt16(vertiba);
+            izvele = button14.Text;
+        }
+
+        private void button15_Click(object sender, EventArgs e) // /
+        {
+            string vertiba = label1.Text;
+            skaitlis1 = Convert.ToInt16(vertiba);
+            izvele = button15.Text;
+        }
         private void button13_Click(object sender, EventArgs e) // =
         {
             string vertiba = label1.Text;
@@ -127,13 +142,28 @@ namespace Pogas
             }
             else
             {
-                label1.Text = Kalkulacija.Atnem(skaitlis1, skaitlis2);
-            }
-        }
-        
-        private void label1_Click(object sender, EventArgs e)
-        {
+                if (izvele == "-")
+                {
+                    label1.Text = Kalkulacija.Atnem(skaitlis1, skaitlis2);
+                }
+                else
+                {
+                    if (izvele == "*")
+                    {
+                        label1.Text = Kalkulacija.Reizina(skaitlis1, skaitlis2);
+                    }
+                    else
+                    {
+                        if (izvele == "/")
+                        {
+                            label1.Text = Kalkulacija.Dala(skaitlis1, skaitlis2);
 
+                        }
+                    }
+                }
+
+
+            }
         }
     }
 }

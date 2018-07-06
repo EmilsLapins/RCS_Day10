@@ -22,6 +22,19 @@ namespace Pogas
             string result = Convert.ToString(a - b);
             return result;
         }
+        public static string Reizina(double a, double b)
+        {
+            string result = Convert.ToString(a * b);
+            return result;
+        }
+
+        public static string Dala(double a, double b)
+        {
+            string result = Convert.ToString(a / b);
+            return result;
+        }
+
+
 
     }
 }
