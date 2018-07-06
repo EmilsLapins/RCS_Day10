@@ -170,7 +170,7 @@ namespace Pogas
                             if (izvele == "^")
                             {
                                 label1.Text = Kalkulacija.Kapina(skaitlis1, skaitlis2);
-                            }
+                            } 
                         }
                     }
                 }
